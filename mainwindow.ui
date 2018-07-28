@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>814</width>
+    <height>753</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>814</width>
+    <height>753</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>814</width>
+    <height>753</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>酒店房间空调控制器</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label_background">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>821</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 85, 255);
+background-image: url(:/Resource/background.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>771</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255,80);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page1">
+     <widget class="QPushButton" name="pushButton_temp_down">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>400</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="statusTip">
+       <string>点击下调目标温度</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+	
+}
+QPushButton:hover{background-color: rgb(69, 69, 207);}
+QPushButton:pressed{background-color: rgb(85, 85, 255)}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>降温</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_temp_up">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>270</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="statusTip">
+       <string>点击上调目标温度</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+	
+}
+QPushButton:hover{background-color: rgb(69, 69, 207);}
+QPushButton:pressed{background-color: rgb(85, 85, 255)}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>升温</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>350</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string>目标温度</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_on_off">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>270</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="statusTip">
+       <string>空调开关</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+	
+}
+QPushButton:hover{background-color: rgb(69, 69, 207);}
+QPushButton:pressed{background-color: rgb(85, 85, 255)}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>开机</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_speed_down">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>400</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="statusTip">
+       <string>点击下调风速</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+	
+}
+QPushButton:hover{background-color: rgb(69, 69, 207);}
+QPushButton:pressed{background-color: rgb(85, 85, 255)}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>降低</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>350</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string>风速调节</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_speed_up">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>270</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="statusTip">
+       <string>点击上调风速</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+	
+}
+QPushButton:hover{background-color: rgb(69, 69, 207);}
+QPushButton:pressed{background-color: rgb(85, 85, 255)}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>调高</string>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_screen">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>741</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>10</y>
+          <width>691</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(20, 20, 20);</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>8</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>房间号:</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumber_idea_temperature">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>60</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 255, 127);
+background-color: rgb(255, 255, 255,0);</string>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>true</bool>
+         </property>
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>26.000000000000000</double>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>26</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_room_name">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>8</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>学六633</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>目标温度：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>64</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+color: rgb(170, 255, 127);
+background-image: url(:/Resource/sheshidu.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>120</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>当前温度：</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumber_current_temperature">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>120</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 255, 127);
+background-color: rgb(255, 255, 255,0);</string>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>true</bool>
+         </property>
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>36.000000000000000</double>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>36</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>125</y>
+           <width>31</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+color: rgb(170, 255, 127);
+background-image: url(:/Resource/sheshidu.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>60</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>用电量：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>120</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>待支付：</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumber_total">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>120</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 255, 127);
+background-color: rgb(255, 255, 255,0);</string>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>5</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>120</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 18pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>元</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumber_power">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>60</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 255, 127);
+background-color: rgb(255, 255, 255,0);</string>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>5</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>1140.000000000000000</double>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>1140</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>60</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>kW.h</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>7</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>工作时长:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_work_state">
+         <property name="geometry">
+          <rect>
+           <x>314</x>
+           <y>70</y>
+           <width>50</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_wind_speed">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>120</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/Resource/fengsu_3.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_work_model">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>50</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>制冷模式</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_work_time">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>7</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>00:01:34</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_network_state">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>7</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>网络连接正常</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>10</y>
+          <width>691</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(20, 20, 20);</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_21">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>70</y>
+           <width>151</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;
+background-color: rgb(255, 255, 255,0);
+color: rgb(170, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>网络连接中....</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_model_switch">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>400</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="statusTip">
+       <string>点击切换制冷制热模式</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+	
+}
+QPushButton:hover{background-color: rgb(69, 69, 207);}
+QPushButton:pressed{background-color: rgb(85, 85, 255)}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>模式切换</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>381</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string>用户登录</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>120</y>
+        <width>521</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,80%);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_password">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>200</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>输入您办理入住的身份证</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;等线&quot;;
+border-radius:4px;padding:2px 2px;
+background-color: rgb(255, 255, 255,0%);</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>请输入身份证号</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_account">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>158</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>输入您的房间号</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;等线&quot;;
+border-radius:4px;padding:2px 2px;
+background-color: rgb(255, 255, 255,0%);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string>请输入您的房间号</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>206</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>身份证：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>163</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>房间号：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_register_image">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>40</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/Resource/head_pic.png);
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_land">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>280</y>
+         <width>240</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="statusTip">
+        <string>点击登录使用空调</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+}
+QPushButton:hover{background-color: rgb(85, 85, 255,90)}
+QPushButton:pressed{background-color: rgb(85, 85, 255,50)}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>登录</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>185</y>
+         <width>211</width>
+         <height>3</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line_2">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>228</y>
+         <width>211</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>120</y>
+        <width>521</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,80%);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_server_port">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>200</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>请输入主机服务所在的端口号</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;等线&quot;;
+border-radius:4px;padding:2px 2px;
+background-color: rgb(255, 255, 255,0%);</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="placeholderText">
+        <string>输入主机服务端口</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_server_ip">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>158</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>请输入主机IP地址</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;等线&quot;;
+border-radius:4px;padding:2px 2px;
+background-color: rgb(255, 255, 255,0%);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string>输入空调系统主机IP</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>206</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>端口：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>163</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>主机地址：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_register_image_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>40</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/Resource/link.png);
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_connect">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>280</y>
+         <width>240</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="statusTip">
+        <string>点击保存配置并连接主机</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+}
+QPushButton:hover{background-color: rgb(85, 85, 255,90)}
+QPushButton:pressed{background-color: rgb(85, 85, 255,50)}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>保存并连接</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line_3">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>185</y>
+         <width>211</width>
+         <height>3</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line_4">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>228</y>
+         <width>211</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>381</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string>从机配置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>381</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string>使用帮助</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>120</y>
+        <width>521</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+background-color: rgb(255, 255, 255,80%);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QLabel" name="label_register_image_3">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>40</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/Resource/help.png);
+background-color: rgb(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_help_back">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>300</y>
+         <width>240</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border:2px groove rgb(255,255,255,0,0);border-radius:10px;padding:2px 4px;
+	font: 12pt &quot;Adobe 黑体 Std R&quot;;
+color:white;
+	
+	background-color: rgb(85, 85, 255);
+}
+QPushButton:hover{background-color: rgb(85, 85, 255,90)}
+QPushButton:pressed{background-color: rgb(85, 85, 255,50)}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>返回</string>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>80</y>
+         <width>451</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255,0);
+font: 13pt &quot;宋体&quot;;</string>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'宋体'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Agency FB'; font-size:12pt;&quot;&gt;一、当本控制系统未与主机连接时，请电话咨询前台询问主机IP以及服务，正确输入IP和端口号完成连接操作。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Agency FB'; font-size:12pt;&quot;&gt;二、已连接状态下，输入您所在的房间号以及办理入住所用的身份证号进行登录。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Agency FB'; font-size:12pt;&quot;&gt;三、成功登录后，您可以通过控制面板调节空调系统的工作状态。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Agency FB'; font-size:12pt;&quot;&gt;四、祝您入住愉快，如有问题欢迎致电前台。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>30</y>
+      <width>491</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>新宋体</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>酒店房间空调从机控制系统</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>814</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_user">
+    <property name="title">
+     <string>用户</string>
+    </property>
+    <addaction name="action_load"/>
+    <addaction name="action_landout"/>
+    <addaction name="action_quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_setting">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="action_control_ban"/>
+    <addaction name="action_network_setting"/>
+    <addaction name="action_simulate_setting"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_help"/>
+   </widget>
+   <addaction name="menu_user"/>
+   <addaction name="menu_setting"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_load">
+   <property name="text">
+    <string>用户登录</string>
+   </property>
+  </action>
+  <action name="action_landout">
+   <property name="text">
+    <string>注销登录</string>
+   </property>
+  </action>
+  <action name="action_quit">
+   <property name="text">
+    <string>退出系统</string>
+   </property>
+  </action>
+  <action name="action_network_setting">
+   <property name="text">
+    <string>网络配置</string>
+   </property>
+  </action>
+  <action name="action_control_ban">
+   <property name="text">
+    <string>控制面板</string>
+   </property>
+  </action>
+  <action name="action_simulate_setting">
+   <property name="text">
+    <string>模拟配置</string>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="text">
+    <string>使用帮助</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

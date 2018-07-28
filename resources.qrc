@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resource/background.jpg</file>
+        <file>Resource/head_pic.png</file>
+        <file>Resource/up.png</file>
+        <file>Resource/sheshidu.png</file>
+        <file>Resource/fengsu.png</file>
+        <file>Resource/fengsu_3.png</file>
+        <file>Resource/fengsu_2.png</file>
+        <file>Resource/fengsu_1.png</file>
+        <file>Resource/link.png</file>
+        <file>Resource/back.png</file>
+        <file>Resource/help.png</file>
+    </qresource>
+</RCC>
